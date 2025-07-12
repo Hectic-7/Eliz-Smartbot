@@ -14,7 +14,7 @@ def speak(text):
     engine.setProperty('rate', 160)
     engine.setProperty('volume', 0.9)
     voices = engine.getProperty('voices')
-    engine.setProperty('voice', voices[1].id)  # Female voice
+    engine.setProperty('voice', voices[1].id)
     engine.say(text)
     engine.runAndWait()
 
@@ -121,7 +121,7 @@ with mic as source:
                 except:
                     response = "Sorry, I couldn't find anything on that."
 
-            # ---------- Open App Commands ---------- #
+            # ---------- Open Website & App Commands ---------- #
             elif "search google for" in user_text:
                 search_term = user_text.split("for")[-1].strip()
                 webbrowser.open(f"https://www.google.com/search?q={search_term}")
@@ -147,7 +147,30 @@ with mic as source:
                 os.startfile("C:\\Users\\vasud\\Music")
                 response = "Playing your music folder."
 
-            # ---------- Close App Commands ---------- #
+            # ---------- Open Folder Commands ---------- #
+            elif "open downloads" in user_text:
+                os.startfile("C:\\Users\\vasud\\Downloads")
+                response = "Opening your Downloads folder."
+
+            elif "open documents" in user_text:
+                os.startfile("C:\\Users\\vasud\\Documents")
+                response = "Opening your Documents folder."
+
+            elif "open desktop" in user_text:
+                os.startfile("C:\\Users\\vasud\\Desktop")
+                response = "Opening your Desktop."
+
+            elif "open my projects folder" in user_text:
+                os.startfile("C:\\Users\\vasud\\Projects")
+                response = "Opening your Projects folder."
+
+            # ---------- Close Folder Commands ---------- #
+            elif "close downloads" in user_text or "close documents" in user_text or "close desktop" in user_text or "close projects folder" in user_text:
+                os.system("taskkill /f /im explorer.exe")
+                os.system("start explorer.exe")
+                response = "Closing folder windows."
+
+            # ---------- Close Apps ---------- #
             elif "close chrome" in user_text:
                 os.system("taskkill /f /im chrome.exe")
                 response = "Closing Chrome."
