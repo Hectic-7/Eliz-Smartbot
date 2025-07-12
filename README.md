@@ -1,4 +1,8 @@
 <p align="center">
+  <img src="assets/eliz_cover.png" width="400"/>
+</p>
+
+<p align="center">
   <img src="https://img.shields.io/badge/Python-3.10-blue"/>
   <img src="https://img.shields.io/badge/License-MIT-green"/>
   <img src="https://img.shields.io/badge/Project-Active-brightgreen"/>
