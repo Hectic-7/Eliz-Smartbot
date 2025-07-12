@@ -95,13 +95,6 @@ python smart_voice_bot_online.py
 
 ---
 
-## 👤 Made By
-
-**Vasudev Saras (aka Dabi)**
-B.Tech Robotics and Automation, Saintgits College of Engineering
-Languages: English | Malayalam | Hindi
-
----
 
 ## 🧰 Virtual Environment Setup (Recommended)
 
@@ -147,6 +140,14 @@ To deactivate:
 ```bash
 deactivate
 ```
+
+---
+
+## 👤 Made By
+
+**Vasudev Saras (aka Dabi)**
+B.Tech Robotics and Automation, Saintgits College of Engineering
+Languages: English | Malayalam | Hindi
 
 ---
 
