@@ -8,6 +8,9 @@
   <img src="https://img.shields.io/badge/Project-Active-brightgreen"/>
 </p>
 
+<p align="center">
+  <img src="https://img.shields.io/badge/Voice-Japanese_Anime_Style_Coming_Soon-red?style=for-the-badge&logo=coqui"/>
+</p>
 
 
 # 🤖 ELIZ - Smart Voice Bot (Online Version)
