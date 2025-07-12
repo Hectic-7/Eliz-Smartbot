@@ -5,8 +5,9 @@ import os
 import wikipedia
 import random
 import ctypes
+from datetime import datetime
 
-# ------------------- Speak Function (Updated) ------------------- #
+# ------------------- Speak Function ------------------- #
 def speak(text):
     print(f"✅ Bot: {text}")
     engine = pyttsx3.init()
@@ -20,7 +21,8 @@ def speak(text):
 # ------------------- Memory ------------------- #
 memory = {
     "name": "Dabi",
-    "fav_subject": "robotics"
+    "fav_subject": "robotics",
+    "fact": ""
 }
 
 jokes = [
@@ -88,6 +90,29 @@ with mic as source:
             elif "tell me a joke" in user_text:
                 response = random.choice(jokes)
 
+            elif "remember that" in user_text:
+                fact = user_text.replace("remember that", "").strip()
+                memory["fact"] = fact
+                response = f"Got it, I’ll remember: {fact}"
+
+            elif "what did you remember" in user_text:
+                fact = memory.get("fact", "I don't remember anything yet.")
+                response = f"You told me: {fact}"
+
+            elif "what time is it" in user_text:
+                response = datetime.now().strftime("It's %I:%M %p")
+
+            elif "what's the date" in user_text:
+                response = datetime.now().strftime("Today is %B %d, %Y")
+
+            elif "calculate" in user_text:
+                expression = user_text.replace("calculate", "").strip()
+                try:
+                    result = eval(expression)
+                    response = f"The answer is {result}"
+                except:
+                    response = "I couldn't solve that expression."
+
             elif "what is" in user_text or "who is" in user_text:
                 query = user_text.replace("what is", "").replace("who is", "").strip()
                 try:
@@ -96,7 +121,7 @@ with mic as source:
                 except:
                     response = "Sorry, I couldn't find anything on that."
 
-            # ---------- Actions ---------- #
+            # ---------- Open App Commands ---------- #
             elif "search google for" in user_text:
                 search_term = user_text.split("for")[-1].strip()
                 webbrowser.open(f"https://www.google.com/search?q={search_term}")
@@ -122,6 +147,34 @@ with mic as source:
                 os.startfile("C:\\Users\\vasud\\Music")
                 response = "Playing your music folder."
 
+            # ---------- Close App Commands ---------- #
+            elif "close chrome" in user_text:
+                os.system("taskkill /f /im chrome.exe")
+                response = "Closing Chrome."
+
+            elif "close notepad" in user_text:
+                os.system("taskkill /f /im notepad.exe")
+                response = "Closing Notepad."
+
+            elif "close calculator" in user_text:
+                os.system("taskkill /f /im calculator.exe")
+                os.system("taskkill /f /im CalculatorApp.exe")
+                response = "Closing Calculator."
+
+            elif "close youtube" in user_text:
+                os.system("taskkill /f /im chrome.exe")
+                os.system("taskkill /f /im msedge.exe")
+                response = "Trying to close YouTube."
+
+            elif "close all apps" in user_text:
+                os.system("taskkill /f /im chrome.exe")
+                os.system("taskkill /f /im msedge.exe")
+                os.system("taskkill /f /im notepad.exe")
+                os.system("taskkill /f /im calculator.exe")
+                os.system("taskkill /f /im CalculatorApp.exe")
+                response = "All clear, Commander Dabi! Closing all apps."
+
+            # ---------- System Control ---------- #
             elif "lock the system" in user_text:
                 response = "Locking your system now."
                 speak(response)
@@ -145,13 +198,10 @@ with mic as source:
             speak(response)
 
         except sr.WaitTimeoutError:
-            response = "You were quiet. Can you say that again?"
-            speak(response)
+            speak("You were quiet. Can you say that again?")
 
         except sr.UnknownValueError:
-            response = "Sorry, I didn't catch that."
-            speak(response)
+            speak("Sorry, I didn't catch that.")
 
         except sr.RequestError:
-            response = "I'm having trouble connecting to the internet."
-            speak(response)    
+            speak("I'm having trouble connecting to the internet.")
