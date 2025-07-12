@@ -2,9 +2,12 @@
   <img src="assets/eliz_cover.png" width="400"/>
 </p>
 
-![Python](https://img.shields.io/badge/Python-3.10-blue)
-![License](https://img.shields.io/badge/License-MIT-green)
-![Status](https://img.shields.io/badge/Project-Active-brightgreen)
+<p align="center">
+  <img src="https://img.shields.io/badge/Python-3.10-blue"/>
+  <img src="https://img.shields.io/badge/License-MIT-green"/>
+  <img src="https://img.shields.io/badge/Project-Active-brightgreen"/>
+</p>
+
 
 
 # 🤖 ELIZ - Smart Voice Bot (Online Version)
