@@ -12,6 +12,20 @@
    <img src="https://img.shields.io/badge/🎙️_Anime_Voice_Cloning-In_Progress_🔧-ff69b4?style=for-the-badge"/>
 </p>
 
+<p align="center">
+  <img src="assets/eliz_cover.png" width="400"/>
+</p>
+
+<p align="center">
+  <img src="https://img.shields.io/badge/Python-3.10-blue"/>
+  <img src="https://img.shields.io/badge/License-MIT-green"/>
+  <img src="https://img.shields.io/badge/Project-Active-brightgreen"/>
+</p>
+
+<p align="center">
+   <img src="https://img.shields.io/badge/🎙️_Anime_Voice_Cloning-In_Progress_🔧-ff69b4?style=for-the-badge"/>
+</p>
+
 # 🤖 ELIZ - Smart Voice Bot (Online Version)
 
 `smart_voice_bot_online.py` is a voice assistant that listens, understands, responds, and speaks back in natural language using online tools. Built with Python, ELIZ is your AI companion that answers questions, tells jokes, opens websites, and even controls your PC.
@@ -100,6 +114,53 @@ python smart_voice_bot_online.py
 **Vasudev Saras (aka Dabi)**
 B.Tech Robotics and Automation, Saintgits College of Engineering
 Languages: English | Malayalam | Hindi
+
+---
+
+## 🧰 Virtual Environment Setup (Recommended)
+
+### 📍 Why?
+
+To keep project dependencies clean and separate.
+
+### 📁 How to Create Virtual Environment
+
+```bash
+# Step 1: Install virtualenv if not installed
+pip install virtualenv
+
+# Step 2: Create a new virtual environment named 'venv'
+python -m venv venv
+```
+
+### ⚡ How to Activate It
+
+**Windows:**
+
+```bash
+venv\Scripts\activate
+```
+
+**Linux/macOS:**
+
+```bash
+source venv/bin/activate
+```
+
+### ✅ After Activation
+
+Then run:
+
+```bash
+pip install -r requirements.txt
+python smart_voice_bot_online.py
+```
+
+To deactivate:
+
+```bash
+deactivate
+```
 
 ---
 
