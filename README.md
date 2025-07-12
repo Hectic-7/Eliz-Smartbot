@@ -1,3 +1,9 @@
+<p align="center">
+  <img src="assets/eliz_cover.png" width="600"/>
+</p>
+
+
+
 # 🤖 ELIZ - Smart Voice Bot (Online Version)
 
 `smart_voice_bot_online.py` is a voice assistant that listens, understands, responds, and speaks back in natural language using online tools. Built with Python, ELIZ is your AI companion that answers questions, tells jokes, opens websites, and even controls your PC.
