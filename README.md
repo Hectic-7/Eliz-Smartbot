@@ -1,22 +1,4 @@
 <p align="center">
-  <img src="assets/eliz_cover.png" width="400"/>
-</p>
-
-<p align="center">
-  <img src="https://img.shields.io/badge/Python-3.10-blue"/>
-  <img src="https://img.shields.io/badge/License-MIT-green"/>
-  <img src="https://img.shields.io/badge/Project-Active-brightgreen"/>
-</p>
-
-<p align="center">
-   <img src="https://img.shields.io/badge/🎙️_Anime_Voice_Cloning-In_Progress_🔧-ff69b4?style=for-the-badge"/>
-</p>
-
-<p align="center">
-  <img src="assets/eliz_cover.png" width="400"/>
-</p>
-
-<p align="center">
   <img src="https://img.shields.io/badge/Python-3.10-blue"/>
   <img src="https://img.shields.io/badge/License-MIT-green"/>
   <img src="https://img.shields.io/badge/Project-Active-brightgreen"/>
